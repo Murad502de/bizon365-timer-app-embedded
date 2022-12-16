@@ -8,9 +8,9 @@ const TheGiftTimer = () => {
   }, []);
 
   return (
-    <div className="bizon-gift-timer">
+    <div className={styles.bizon_gift_timer}>
       <BzCard>
-        <div className="bizon-gift-timer__content">
+        <div className={styles.bizon_gift_timer__content}>
           GiftTimer React Component
         </div>
       </BzCard>
