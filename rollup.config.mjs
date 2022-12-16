@@ -12,7 +12,7 @@ import alias from '@rollup/plugin-alias';
 export default {
   input: "src/index.js",
   output: {
-    file: "dist/bundle.min.js",
+    file: "build/bundle.min.js",
     format: "iife",
     name: 'bizon365_timer_app_embedded',
     plugins: [terser()],
