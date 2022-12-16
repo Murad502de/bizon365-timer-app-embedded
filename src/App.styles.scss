@@ -1,6 +1,4 @@
 .bizon365_timer_app_embedded {
-  margin-top: 15px;
-
   &__container {
     display: flex;
     flex-direction: row;
@@ -8,5 +6,6 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
   }
 }
