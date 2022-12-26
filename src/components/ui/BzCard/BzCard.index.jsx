@@ -8,7 +8,6 @@ const BzCard = ({ children }) => {
 
   return (
     <div className={styles.bzcard}>
-      BzCard React Component
       {children}
     </div>
   );

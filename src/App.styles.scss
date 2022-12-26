@@ -1,11 +1,31 @@
 .bizon365_timer_app_embedded {
   &__container {
+    box-sizing: border-box;
+    padding: 24px;
     display: flex;
-    flex-direction: row;
+    margin-bottom: 15px;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-content: center;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+  }
+
+  &__gift_progress,
+  &__gift_current {
+    text-align: center;
+  }
+
+  &__gift_progress {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__gift_current {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+
+  &__gift_timer {
+    margin-top: 24px;
   }
 }

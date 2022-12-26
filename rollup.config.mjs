@@ -21,6 +21,8 @@ export default {
     alias({
       entries: [
         { find: '@components', replacement: `${__dirname}/src/components` },
+        { find: '@api', replacement: `${__dirname}/src/api` },
+        { find: '@helpers', replacement: `${__dirname}/src/helpers` },
       ]
     }),
     json(),
@@ -33,7 +35,9 @@ export default {
       extensions: [".js", ".jsx", ".scss"],
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('development'),
+      // 'process.env.API_URL': JSON.stringify('http://localhost:8090/api/v1/embedded'),
+      'process.env.API_URL': JSON.stringify('https://dev.centriym.ru/gift-timer/bizon365-timer-app-gateway/public/api/v1/embedded'),
     }),
     babel({
       presets: ["@babel/preset-react"],
@@ -44,7 +48,7 @@ export default {
       verbose: true,
       contentBase: ["", "./"],
       host: "localhost",
-      port: 3000,
+      port: 8080,
     }),
   ],
 };
