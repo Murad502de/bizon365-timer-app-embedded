@@ -3,7 +3,7 @@ import styles from './BzCard.styles';
 
 const BzCard = ({ children }) => {
   useEffect(() => {
-    console.debug('BzCard[useEffect]'); //DELETE
+    // console.debug('BzCard[useEffect]'); //DELETE
   }, []);
 
   return (

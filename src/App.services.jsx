@@ -1,5 +1,5 @@
 export const giftTimerFinish = () => {
-  console.debug('App/services/giftTimerFinish'); //DELETE
+  // console.debug('App/services/giftTimerFinish'); //DELETE
 
   return {
     giftTimer: 25,

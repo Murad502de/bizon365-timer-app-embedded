@@ -20,17 +20,17 @@ const TheGiftTimer = ({
   const [btnShowState, setBtnShowState] = useState(null);
 
   useEffect(() => {
-    console.debug('GiftTimer/useEffect/giftTimer', giftTimer); //DELETE
-    console.debug('GiftTimer/useEffect/downloadTimer', downloadTimer); //DELETE
+    // console.debug('GiftTimer/useEffect/giftTimer', giftTimer); //DELETE
+    // console.debug('GiftTimer/useEffect/downloadTimer', downloadTimer); //DELETE
 
     clearInterval(timerInterval);
 
     if (giftTimer === 0 && downloadTimer === 0) {
-      console.debug('GiftTimer/useEffect/finish'); //DELETE
+      // console.debug('GiftTimer/useEffect/finish'); //DELETE
 
       finish();
     } else {
-      console.debug('GiftTimer/useEffect/run-timer'); //DELETE
+      // console.debug('GiftTimer/useEffect/run-timer'); //DELETE
 
       setGiftTimerDownState(new Date().getTime() + giftTimer * 1000);
     }
@@ -40,7 +40,7 @@ const TheGiftTimer = ({
     link,
   ]);
   useEffect(() => {
-    console.debug('GiftTimer/useEffect/giftTimerDownState', giftTimerDownState); //DELETE
+    // console.debug('GiftTimer/useEffect/giftTimerDownState', giftTimerDownState); //DELETE
 
     if (giftTimerDownState !== -1) {
       timerInterval = setInterval(runTimerInterval, 500);
@@ -50,7 +50,7 @@ const TheGiftTimer = ({
 
   }, [giftTimerDownState]);
   useEffect(() => {
-    console.debug('GiftTimer/useEffect/linkTimerDownState', linkTimerDownState); //DELETE
+    // console.debug('GiftTimer/useEffect/linkTimerDownState', linkTimerDownState); //DELETE
 
     if (linkTimerDownState !== -1) {
       linkInterval = setInterval(runLinkInterval, 500);
@@ -60,15 +60,15 @@ const TheGiftTimer = ({
 
   }, [linkTimerDownState]);
   useEffect(() => {
-    console.debug('GiftTimer/useEffect/timerEnded/timerShowState', timerShowState); //DELETE
-    console.debug('GiftTimer/useEffect/timerEnded/btnShowState', btnShowState); //DELETE
+    // console.debug('GiftTimer/useEffect/timerEnded/timerShowState', timerShowState); //DELETE
+    // console.debug('GiftTimer/useEffect/timerEnded/btnShowState', btnShowState); //DELETE
 
     if (
       (!timerShowState && !btnShowState) &&
       (timerShowState !== null) &&
       (btnShowState !== null)
     ) {
-      console.debug('GiftTimer/useEffect/timerEnded/end', !timerShowState || !btnShowState); //DELETE
+      // console.debug('GiftTimer/useEffect/timerEnded/end', !timerShowState || !btnShowState); //DELETE
 
       finish();
     }
@@ -89,7 +89,7 @@ const TheGiftTimer = ({
     setSecondsState(Math.floor((timeleft % (1000 * 60)) / 1000));
 
     if (timeleft < 0) {
-      console.debug('GiftTimer/runTimerInterval/stop'); //DELETE
+      // console.debug('GiftTimer/runTimerInterval/stop'); //DELETE
 
       clearInterval(timerInterval);
       // setDaysState(0);
@@ -108,16 +108,16 @@ const TheGiftTimer = ({
     // console.debug('GiftTimer/runLinkInterval/now', now); //DELETE
 
     if (timeleft < 0) {
-      console.debug('GiftTimer/runLinkInterval/stop'); //DELETE
+      // console.debug('GiftTimer/runLinkInterval/stop'); //DELETE
 
       clearInterval(linkInterval);
       setBtnShowState(false);
     }
   };
   const getTimerStr = ({ hours, minutes, seconds, }) => {
-    console.debug('GiftTimer/services/getTimerStr/hours', hours); //DELETE
-    console.debug('GiftTimer/services/getTimerStr/minutes', minutes); //DELETE
-    console.debug('GiftTimer/services/getTimerStr/seconds', seconds); //DELETE
+    // console.debug('GiftTimer/services/getTimerStr/hours', hours); //DELETE
+    // console.debug('GiftTimer/services/getTimerStr/minutes', minutes); //DELETE
+    // console.debug('GiftTimer/services/getTimerStr/seconds', seconds); //DELETE
 
     const _hours = hours < 10 ? `0${hours}` : hours;
     const _minutes = minutes < 10 ? `0${minutes}` : minutes;
